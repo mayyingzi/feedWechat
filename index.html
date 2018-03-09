@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <meta name="wap-font-scale" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>新希望六和饲料产业报表</title>
+    <script>
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var ua = window.navigator.userAgent;
+        var isAndroid = /android/gi.test(ua);
+        var isIphone = /iphone/gi.test(ua);
+        var dpr = window.devicePixelRatio || 1;
+
+        function setRem() {
+            var contentWidth;
+            if (isIphone) {
+                contentWidth = window.screen.width * dpr;
+            } else if (isAndroid) {
+                contentWidth = window.innerWidth * dpr;
+            } else {
+                contentWidth = 360;
+            }
+            document.documentElement.style.fontSize = 100 * contentWidth / 750 + 'px';
+        }
+
+        if (isAndroid) {
+            dpr = 1;
+        } else if (isIphone) {
+            if (dpr > 2) {
+                dpr = 2;
+            }
+        }
+        var scale = (1 / dpr).toFixed(2);
+        metaEl.setAttribute('content', 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        document.documentElement.setAttribute('data-dpr', dpr);
+
+        setRem();
+        addEventListener('DOMContentLoaded', setRem);
+    </script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

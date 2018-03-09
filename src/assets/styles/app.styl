@@ -1,0 +1,38 @@
+@import './variables'
+@import './mixins'
+@import './reset'
+
+global-reset()
+
+html, body
+    height 100%
+    color $fcBlack
+    font-family sans-serif
+body
+    font-size rem($fontBase)
+#app
+    height 100%
+
+.mask
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height @width
+    background-color rgba(0, 0, 0, 0%)
+    z-index 1050
+// data picker init style
+.gearDate
+    font-size .2rem !important
+    .date_btn
+        color $fcBlue !important
+
+// data piker unit   
+.area_ctrl
+    font-size .24rem !important
+    .area_btn
+        color $fcBlue !important
+
+  
+
+

@@ -1,0 +1,244 @@
+@import '../../assets/styles/mixins'
+
+.reportView
+    background-color #f5f5f5
+    min-height 100%
+    font-size rem(16)
+    color $fcGrey
+    .reTab
+        background-color $fcWhite
+        display flex
+        height rem(50)
+        border-bottom 1px solid $fcGreyer
+        .tab-cell
+            color $fcGrey
+            flex 1
+            height rem(50)
+            line-height rem(50)
+            text-align center
+            // align-self center
+            .txt
+                display inline-block
+                height 100%
+                position relative
+                padding-left rem(5)
+                padding-right rem(5)
+                &:after
+                    content ''
+                    position absolute
+                    height 2px
+                    width 100%                    
+                    left 0
+                    bottom -1px
+            &.cur
+                color $fcBlue
+                .txt
+                    &:after
+                        background-color $fcBlue
+    .reUnit
+        background-color #fff
+        margin-bottom rem(10)
+        padding rem(10) rem(10) rem(1)
+    .flexWrap
+        display flex
+        margin-bottom rem(12)
+        line-height 1.2em
+        .flexHd
+            flex 1
+            color $fcBlack
+        .unitSelect
+            padding-right rem(15)
+            padding-top rem(2)
+            padding-bottom rem(2)
+            position relative
+            &:after
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width rem(6)
+                height rem(10)
+                background url('../../assets/images/icon_ar.png') no-repeat center center 
+                background-size rem(6) rem(10)
+                right 0
+                top 50%
+                transform translate(0, -50%)
+            &.disabled
+                &:after
+                    display none
+    .reType
+        margin-bottom rem(10)
+        background-color #fff
+        padding rem(15) rem(10) rem(1)
+        .typeTab
+            padding 0 rem(70)
+            .Typewrap
+                display flex
+                width 100%
+                border-radius rem(4)
+                border 1px solid $fcBlue
+                overflow hidden
+            .typeItem
+                background-color #fff
+                color $fcBlue
+                font-size rem(14)
+                line-height 1.2em
+                padding rem(8) 0
+                flex 1
+                text-align center
+                box-sizing border-box
+                &:first-child
+                    border-right 1px solid $fcBlue
+                &.cur
+                    background-color $fcBlue
+                    color #fff
+        .selectData
+            margin-bottom 0
+            padding-top rem(10)
+            padding-bottom rem(6)
+            .unitSelect,.flexHd
+                padding-top rem(10)
+                padding-bottom rem(10)
+    .reDetailW
+        background-color #fff
+        .detailItem
+            border-top 1px solid $fcGreyer
+            &:first-child
+                border none
+            .topItem
+                display flex
+                line-height 1.2em
+                padding rem(15) rem(10)
+                align-items center
+                
+            &.hasChildR
+                .topItem
+                    .deRt
+                        padding-right rem(15)
+                        position relative
+                        &:after
+                            content: "";
+                            display: inline-block;
+                            position: absolute;
+                            width rem(6)
+                            height rem(10)
+                            background url('../../assets/images/icon_ar.png') no-repeat center center 
+                            background-size rem(6) rem(10)
+                            right 0
+                            top 50%
+                            transform translate(0, -50%)
+            &.hasChildD
+                .topItem
+                    .deRt
+                        padding-right rem(15)                        
+                        &:after
+                            transform translate(0, -50%) rotate(90deg)
+            .deHd
+                color $fcBlack
+                flex 1
+                padding-right rem(5)
+            .deRt
+                padding-right rem(0)
+        .childItem
+            display none
+            padding-left rem(40)
+            border-top 1px solid $fcGreyer
+            .childCell
+                display flex
+                border-bottom 1px solid $fcGreyer
+                padding rem(20) rem(10) rem(20) 0
+                .deRt
+                    padding-right rem(15)
+                &:last-child
+                    border none                    
+        .detailItem
+            &.hasChildD
+                .childItem
+                    display block
+
+    .selectUnit
+        overflow-y scroll
+        background-color #fff
+        position fixed
+        top 0
+        bottom 0
+        left 0
+        right 0
+        width 100%
+        z-index 9
+        .matchKey
+            min-height rem(10)
+            padding-top rem(80)
+            .unitItem
+                .itemName
+                    color $fcGreyish
+        .showBPick
+            padding-top rem(80)
+        .unitItem
+            line-height 1.2em
+            display flex
+            padding rem(20) rem(10)
+            border-bottom 1px solid $fcGreyer
+            .itemTit
+                color $fcBlue
+                width rem(90)
+            &.disable
+                .itemTit,.itemName
+                    color #ccc
+            .itemName
+                flex 1
+                color $fcBlue
+                word-break break-all
+        .selectBtn
+            position absolute
+            width 100%
+            text-align center
+            height rem(50)
+            line-height rem(50)
+            color #fff
+            background-color $fcBlue
+            bottom 0
+            left 0
+            z-index 10
+        .topSearch
+            position relative
+            font-size rem(16)
+            height rem(80)
+            box-sizing border-box
+            position fixed
+            left 0
+            width 100%
+            top 0 
+            background-color #fff          
+        .searchIn
+            font-size rem(16)
+            line-height 1.2em
+            display block
+            border-radius rem(4)
+            width 100%
+            box-sizing border-box
+            border none
+            padding rem(5) rem(3) rem(5) rem(45)
+            height rem(40)            
+            color $fcBlue
+            background #e8e8e8 url('../../assets/images/icon_search.png') no-repeat rem(10) center 
+            background-size rem(21)
+    .pickerBox
+        position fixed
+        width 100%
+        top 0
+        bottom 0
+        background-color rgba(0,0,0,.5)
+        z-index 9
+            
+            
+                
+                        
+
+                    
+              
+
+
+
+
+
+            

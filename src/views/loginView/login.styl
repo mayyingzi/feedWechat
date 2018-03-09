@@ -1,0 +1,47 @@
+@import '../../assets/styles/mixins'
+
+.loginView
+    font-size rem(16)
+    padding rem(30) rem(20)
+    .logo
+        width rem(75)
+        height @width
+        background url('../../assets/images/logo.png') no-repeat center center
+        background-size rem(75)
+        margin 0 auto
+    .pageTit
+        text-align center
+        padding rem(20) rem(5)
+    .loginIn
+        padding-top rem(2)
+        padding-bottom rem(5)
+        width 100%
+        max-width rem(345)
+        box-sizing border-box
+        margin 0 auto
+        .inWrap
+            text-align left
+            display block
+            color $fcGrey
+            .inItem
+                font-size rem(14)
+                display block
+                border 1px solid $fcGreyer
+                border-radius rem(4)
+                width 100%
+                box-sizing border-box
+                padding rem(5) rem(3)
+                height rem(40)
+                margin-top rem(10)
+                margin-bottom rem(15)
+                color $fcBlack
+        .submitBtn
+            margin-top rem(15)
+            border-radius rem(4)
+            color #fff
+            font-size rem(16)
+            background-color $fcBlue
+            width 100%
+            text-align center
+            height rem(40)
+            line-height rem(40)

@@ -1,0 +1,35 @@
+@import '../../assets/styles/mixins'
+@import '../../assets/styles/variables'
+
+.alertWrapper
+    .alert
+        position absolute
+        top 35%
+        left -40%
+        margin-left 50%
+        width 80%
+        background-color $fcWhite
+        border-radius 10px
+        text-align center
+        box-shadow 1px 1px 10px alpha($fcGreyish, 0.6)
+    .message
+        padding rem(30) 0
+        retinaBorder(false, false, false, true)
+        &:before
+            border-width 1px
+    .singleBtn, .alertBtn
+        padding rem(12) 0
+        &:active
+            background-color darken($fcWhite, 5%)
+    .buttonSection
+        overflow hidden
+    .alertBtn
+        width 50%
+    .alertLeft
+        retinaBorder(false, false, true)
+        &:before
+            border-width 1px
+        float left
+    .alertRight
+        margin-left -1px
+        float left
